@@ -6,7 +6,8 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility/releases/download/26.0.5/Universal.x86.Tuning.Utility.Portable.zip",
-            "hash": "0dc79ff8e909f18d191a1a3d9d40b55b001b5ba3a1a8ba20db96d2d0d92d12e7"
+            "hash": "0dc79ff8e909f18d191a1a3d9d40b55b001b5ba3a1a8ba20db96d2d0d92d12e7",
+            "extract_dir": "net10.0-windows10.0.22621.0"
         }
     },
     "shortcuts": [
@@ -29,7 +30,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility/releases/download/$version/Universal.x86.Tuning.Utility.Portable.zip"
+                "url": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility/releases/download/$version/Universal.x86.Tuning.Utility.Portable.zip",
+                "extract_dir": "net10.0-windows10.0.22621.0"
             }
         }
     }

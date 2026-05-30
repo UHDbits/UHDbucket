@@ -12,46 +12,18 @@
     "installer": {
         "script": [
             "Expand-Archive -Path \"$dir\\WPILib_Windows-$version-artifacts.zip\" -DestinationPath \"$dir\" -Force",
-            "& \"$dir\\tools\\ToolsUpdater.exe\"",
-            "$sb = Get-ChildItem \"$dir\\maven\\org\\wpilib\\shuffleboard\\shuffleboard-app\\*\\shuffleboard-app-*.jar\" | Select-Object -First 1",
-            "if ($sb) {",
-            "    $relativeJar = $sb.FullName.Substring($dir.Length + 1)",
-            "    Set-Content -Path \"$dir\\shuffleboard.bat\" -Value '@echo off', ('\"%~dp0jdk\\bin\\java.exe\" -jar \"%~dp0' + $relativeJar + '\" %*')",
-            "}",
-            "$sd = Get-ChildItem \"$dir\\maven\\org\\wpilib\\smartdashboard\\smartdashboard-app\\*\\smartdashboard-app-*.jar\" | Select-Object -First 1",
-            "if ($sd) {",
-            "    $relativeJar = $sd.FullName.Substring($dir.Length + 1)",
-            "    Set-Content -Path \"$dir\\smartdashboard.bat\" -Value '@echo off', ('\"%~dp0jdk\\bin\\java.exe\" -jar \"%~dp0' + $relativeJar + '\" %*')",
-            "}",
-            "$rb = Get-ChildItem \"$dir\\maven\\org\\wpilib\\robotbuilder\\RobotBuilder\\*\\RobotBuilder-*.jar\" | Select-Object -First 1",
-            "if ($rb) {",
-            "    $relativeJar = $rb.FullName.Substring($dir.Length + 1)",
-            "    Set-Content -Path \"$dir\\robotbuilder.bat\" -Value '@echo off', ('\"%~dp0jdk\\bin\\java.exe\" -jar \"%~dp0' + $relativeJar + '\" %*')",
-            "}",
-            "$pw = Get-ChildItem \"$dir\\maven\\org\\wpilib\\pathweaver\\pathweaver-app\\*\\pathweaver-app-*.jar\" | Select-Object -First 1",
-            "if ($pw) {",
-            "    $relativeJar = $pw.FullName.Substring($dir.Length + 1)",
-            "    Set-Content -Path \"$dir\\pathweaver.bat\" -Value '@echo off', ('\"%~dp0jdk\\bin\\java.exe\" -jar \"%~dp0' + $relativeJar + '\" %*')",
-            "}",
+            "& \"$dir\\tools\\ToolsUpdater.bat\"",
             "Get-ChildItem -Path \"$dir\" -File | Remove-Item -Force",
-            "Get-ChildItem -Path \"$dir\" -Directory | Where-Object { $_.Name -notin 'tools', 'advantagescope', 'elastic', 'jdk', 'vscode', 'maven', 'vendordeps' } | Remove-Item -Recurse -Force"
+            "Get-ChildItem -Path \"$dir\" -Directory | Where-Object { $_.Name -notin 'tools', 'advantagescope', 'elastic', 'jdk', 'vscode', 'maven', 'vendordeps' } | Remove-Item -Recurse -Force",
+            "$year = $version.Split('.')[0]",
+            "$public_wpilib = \"C:\\Users\\Public\\wpilib\\$year\"",
+            "if (!(Test-Path $public_wpilib)) { New-Item -ItemType Directory -Path $public_wpilib -Force | Out-Null }",
+            "if (Test-Path \"$public_wpilib\\maven\") { Remove-Item \"$public_wpilib\\maven\" -Force }",
+            "New-Item -ItemType Junction -Path \"$public_wpilib\\maven\" -Value \"$dir\\maven\" -Force | Out-Null",
+            "if (Test-Path \"$public_wpilib\\vendordeps\") { Remove-Item \"$public_wpilib\\vendordeps\" -Force }",
+            "New-Item -ItemType Junction -Path \"$public_wpilib\\vendordeps\" -Value \"$dir\\vendordeps\" -Force | Out-Null"
         ]
     },
-    "bin": [
-        ["tools/glass.exe", "glass"],
-        ["tools/outlineviewer.exe", "outlineviewer"],
-        ["tools/sysid.exe", "sysid"],
-        ["tools/datalogtool.exe", "datalogtool"],
-        ["tools/wpical.exe", "wpical"],
-        ["tools/roborioteamnumbersetter.exe", "roborioteamnumbersetter"],
-        ["advantagescope/AdvantageScope (WPILib).exe", "advantagescope"],
-        ["elastic/elastic_dashboard.exe", "elastic"],
-        ["vscode/Code.exe", "wpilib-vscode"],
-        "shuffleboard.bat",
-        "smartdashboard.bat",
-        "robotbuilder.bat",
-        "pathweaver.bat"
-    ],
     "shortcuts": [
         ["tools/glass.exe", "FRC\\WPILib Tools\\Glass"],
         ["tools/outlineviewer.exe", "FRC\\WPILib Tools\\OutlineViewer"],
@@ -73,6 +45,17 @@
         ["vscode/Code.exe", "FRC\\WPILib VS Code"]
     ],
     "persist": ["vscode/data"],
+    "uninstaller": {
+        "script": [
+            "$year = $version.Split('.')[0]",
+            "$public_wpilib = \"C:\\Users\\Public\\wpilib\\$year\"",
+            "if (Test-Path \"$public_wpilib\\maven\") { Remove-Item \"$public_wpilib\\maven\" -Force }",
+            "if (Test-Path \"$public_wpilib\\vendordeps\") { Remove-Item \"$public_wpilib\\vendordeps\" -Force }",
+            "if (Test-Path $public_wpilib) {",
+            "    if ((Get-ChildItem $public_wpilib).Count -eq 0) { Remove-Item $public_wpilib -Force }",
+            "}"
+        ]
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {

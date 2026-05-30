@@ -1,0 +1,39 @@
+{
+    "version": "26.0.4",
+    "description": "An AMD & Intel tuning utility to maximize performance and battery life on x86 processors.",
+    "homepage": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility/releases/download/26.0.4/Universal.x86.Tuning.Utility.Portable.zip",
+            "hash": "6b6393368afdf497cf0e2193d6b8207cf3ed90d4aa1db6e92c41f0e87a79218f"
+        }
+    },
+    "bin": [
+        [ "Universal x86 Tuning Utility.exe", "uxtu" ]
+    ],
+    "shortcuts": [
+        [ "Universal x86 Tuning Utility.exe", "Universal x86 Tuning Utility" ]
+    ],
+    "persist": [
+        "adaptivePresets.json",
+        "apuPresets.json",
+        "amdDtCpuPresets.json",
+        "intelPresets.json",
+        "gameData.json",
+        "ScaleModels.json",
+        "logs"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/JamesCJ60/Universal-x86-Tuning-Utility/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/JamesCJ60/Universal-x86-Tuning-Utility/releases/download/$version/Universal.x86.Tuning.Utility.Portable.zip"
+            }
+        }
+    }
+}

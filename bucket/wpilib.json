@@ -67,6 +67,9 @@
         [ "robotbuilder.bat", "WPILib Tools\\RobotBuilder" ],
         [ "pathweaver.bat", "WPILib Tools\\PathWeaver" ]
     ],
+    "persist": [
+        "vscode/data"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

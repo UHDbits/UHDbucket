@@ -11,7 +11,7 @@
     },
     "bin": "BLine.exe",
     "shortcuts": [
-        [ "BLine.exe", "BLine-GUI" ]
+        [ "BLine.exe", "FRC\\BLine-GUI" ]
     ],
     "checkver": "github",
     "autoupdate": {

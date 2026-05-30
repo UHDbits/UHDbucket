@@ -53,19 +53,15 @@
         "pathweaver.bat"
     ],
     "shortcuts": [
-        [ "tools/glass.exe", "WPILib Tools\\Glass" ],
-        [ "tools/outlineviewer.exe", "WPILib Tools\\OutlineViewer" ],
-        [ "tools/sysid.exe", "WPILib Tools\\SysId" ],
-        [ "tools/datalogtool.exe", "WPILib Tools\\Data Log Tool" ],
-        [ "tools/wpical.exe", "WPILib Tools\\WPIcal" ],
-        [ "tools/roborioteamnumbersetter.exe", "WPILib Tools\\RoboRIO Team Number Setter" ],
-        [ "advantagescope/AdvantageScope (WPILib).exe", "WPILib Tools\\AdvantageScope" ],
-        [ "elastic/elastic_dashboard.exe", "WPILib Tools\\Elastic" ],
-        [ "vscode/Code.exe", "WPILib VS Code" ],
-        [ "shuffleboard.bat", "WPILib Tools\\Shuffleboard" ],
-        [ "smartdashboard.bat", "WPILib Tools\\SmartDashboard" ],
-        [ "robotbuilder.bat", "WPILib Tools\\RobotBuilder" ],
-        [ "pathweaver.bat", "WPILib Tools\\PathWeaver" ]
+        [ "tools/glass.exe", "FRC\\WPILib Tools\\Glass" ],
+        [ "tools/outlineviewer.exe", "FRC\\WPILib Tools\\OutlineViewer" ],
+        [ "tools/sysid.exe", "FRC\\WPILib Tools\\SysId" ],
+        [ "tools/datalogtool.exe", "FRC\\WPILib Tools\\Data Log Tool" ],
+        [ "tools/wpical.exe", "FRC\\WPILib Tools\\WPIcal" ],
+        [ "tools/roborioteamnumbersetter.exe", "FRC\\WPILib Tools\\RoboRIO Team Number Setter" ],
+        [ "advantagescope/AdvantageScope (WPILib).exe", "FRC\\WPILib Tools\\AdvantageScope (WPILib)" ],
+        [ "elastic/elastic_dashboard.exe", "FRC\\WPILib Tools\\Elastic (WPILib)" ],
+        [ "vscode/Code.exe", "FRC\\WPILib VS Code" ]
     ],
     "persist": [
         "vscode/data"

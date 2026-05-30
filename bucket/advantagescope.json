@@ -19,7 +19,7 @@
         [ "AdvantageScope.exe", "ascope" ]
     ],
     "shortcuts": [
-        [ "AdvantageScope.exe", "AdvantageScope" ]
+        [ "AdvantageScope.exe", "FRC\\AdvantageScope" ]
     ],
     "checkver": "github",
     "autoupdate": {

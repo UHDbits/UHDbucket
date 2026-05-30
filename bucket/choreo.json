@@ -14,7 +14,7 @@
         "choreo-cli.exe"
     ],
     "shortcuts": [
-        [ "choreo.exe", "Choreo" ]
+        [ "choreo.exe", "FRC\\Choreo" ]
     ],
     "checkver": "github",
     "autoupdate": {

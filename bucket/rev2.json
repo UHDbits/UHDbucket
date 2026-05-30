@@ -16,7 +16,7 @@
         [ "bin/REV Hardware Client 2.exe", "rev-hardware-client-2" ]
     ],
     "shortcuts": [
-        [ "bin/REV Hardware Client 2.exe", "REV Hardware Client 2" ]
+        [ "bin/REV Hardware Client 2.exe", "FRC\\REV Hardware Client 2" ]
     ],
     "checkver": {
         "url": "https://rhc2.revrobotics.com/download/download.html",

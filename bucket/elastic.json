@@ -14,7 +14,7 @@
         [ "elastic_dashboard.exe", "elastic-dashboard" ]
     ],
     "shortcuts": [
-        [ "elastic_dashboard.exe", "Elastic" ]
+        [ "elastic_dashboard.exe", "FRC\\Elastic" ]
     ],
     "checkver": "github",
     "autoupdate": {

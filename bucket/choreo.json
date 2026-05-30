@@ -9,13 +9,7 @@
             "hash": "bd81fba4f210b105003660d8963ee8ad4fe92340d0216f055544b89bf3ba73c3"
         }
     },
-    "bin": [
-        "choreo.exe",
-        "choreo-cli.exe"
-    ],
-    "shortcuts": [
-        [ "choreo.exe", "FRC\\Choreo" ]
-    ],
+    "shortcuts": [["choreo.exe", "FRC\\Choreo"]],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

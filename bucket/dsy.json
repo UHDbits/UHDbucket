@@ -9,12 +9,7 @@
             "hash": "92e277b6e4d40269d72bac92e096c490cec05fa918cd13ebe632b392f0fdd8b4"
         }
     },
-    "bin": [
-        [ "DualSenseY.exe", "dsy" ]
-    ],
-    "shortcuts": [
-        [ "DualSenseY.exe", "DualSenseY" ]
-    ],
+    "shortcuts": [["DualSenseY.exe", "DualSenseY"]],
     "checkver": {
         "github": "https://github.com/WujekFoliarz/DualSenseY-v2"
     },

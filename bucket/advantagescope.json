@@ -14,13 +14,7 @@
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
         "Get-ChildItem \"$dir\" -Filter \"`$*\" | Remove-Item -Recurse -Force"
     ],
-    "bin": [
-        [ "AdvantageScope.exe", "advantagescope" ],
-        [ "AdvantageScope.exe", "ascope" ]
-    ],
-    "shortcuts": [
-        [ "AdvantageScope.exe", "FRC\\AdvantageScope" ]
-    ],
+    "shortcuts": [["AdvantageScope.exe", "FRC\\AdvantageScope"]],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

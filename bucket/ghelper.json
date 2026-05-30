@@ -9,10 +9,7 @@
             "hash": "d9f75a1df4f968ecf57d8ebbb86f5c39a2ece70b9834b4ba6afd2ff349a7c31a"
         }
     },
-    "bin": "GHelper.exe",
-    "shortcuts": [
-        [ "GHelper.exe", "G-Helper" ]
-    ],
+    "shortcuts": [["GHelper.exe", "GHelper"]],
     "checkver": {
         "url": "https://api.github.com/repos/seerge/g-helper-experimental-release/releases",
         "jsonpath": "$[0].tag_name",

@@ -9,10 +9,7 @@
             "hash": "5ae097d36ac1cf26fa44bb8f4448bf37f3112527243b5d8c9792bf04131d42b2"
         }
     },
-    "bin": "BLine.exe",
-    "shortcuts": [
-        [ "BLine.exe", "FRC\\BLine-GUI" ]
-    ],
+    "shortcuts": [["BLine.exe", "FRC\\BLine-GUI"]],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

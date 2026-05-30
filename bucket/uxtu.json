@@ -9,17 +9,8 @@
             "hash": "0dc79ff8e909f18d191a1a3d9d40b55b001b5ba3a1a8ba20db96d2d0d92d12e7"
         }
     },
-    "bin": [
-        [
-            "Universal x86 Tuning Utility.exe",
-            "uxtu"
-        ]
-    ],
     "shortcuts": [
-        [
-            "Universal x86 Tuning Utility.exe",
-            "Universal x86 Tuning Utility"
-        ]
+        ["Universal x86 Tuning Utility.exe", "Universal x86 Tuning Utility"]
     ],
     "persist": [
         "adaptivePresets.json",

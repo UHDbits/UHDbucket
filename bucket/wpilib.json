@@ -38,34 +38,41 @@
         ]
     },
     "bin": [
-        [ "tools/glass.exe", "glass" ],
-        [ "tools/outlineviewer.exe", "outlineviewer" ],
-        [ "tools/sysid.exe", "sysid" ],
-        [ "tools/datalogtool.exe", "datalogtool" ],
-        [ "tools/wpical.exe", "wpical" ],
-        [ "tools/roborioteamnumbersetter.exe", "roborioteamnumbersetter" ],
-        [ "advantagescope/AdvantageScope (WPILib).exe", "advantagescope" ],
-        [ "elastic/elastic_dashboard.exe", "elastic" ],
-        [ "vscode/Code.exe", "wpilib-vscode" ],
+        ["tools/glass.exe", "glass"],
+        ["tools/outlineviewer.exe", "outlineviewer"],
+        ["tools/sysid.exe", "sysid"],
+        ["tools/datalogtool.exe", "datalogtool"],
+        ["tools/wpical.exe", "wpical"],
+        ["tools/roborioteamnumbersetter.exe", "roborioteamnumbersetter"],
+        ["advantagescope/AdvantageScope (WPILib).exe", "advantagescope"],
+        ["elastic/elastic_dashboard.exe", "elastic"],
+        ["vscode/Code.exe", "wpilib-vscode"],
         "shuffleboard.bat",
         "smartdashboard.bat",
         "robotbuilder.bat",
         "pathweaver.bat"
     ],
     "shortcuts": [
-        [ "tools/glass.exe", "FRC\\WPILib Tools\\Glass" ],
-        [ "tools/outlineviewer.exe", "FRC\\WPILib Tools\\OutlineViewer" ],
-        [ "tools/sysid.exe", "FRC\\WPILib Tools\\SysId" ],
-        [ "tools/datalogtool.exe", "FRC\\WPILib Tools\\Data Log Tool" ],
-        [ "tools/wpical.exe", "FRC\\WPILib Tools\\WPIcal" ],
-        [ "tools/roborioteamnumbersetter.exe", "FRC\\WPILib Tools\\RoboRIO Team Number Setter" ],
-        [ "advantagescope/AdvantageScope (WPILib).exe", "FRC\\WPILib Tools\\AdvantageScope (WPILib)" ],
-        [ "elastic/elastic_dashboard.exe", "FRC\\WPILib Tools\\Elastic (WPILib)" ],
-        [ "vscode/Code.exe", "FRC\\WPILib VS Code" ]
+        ["tools/glass.exe", "FRC\\WPILib Tools\\Glass"],
+        ["tools/outlineviewer.exe", "FRC\\WPILib Tools\\OutlineViewer"],
+        ["tools/sysid.exe", "FRC\\WPILib Tools\\SysId"],
+        ["tools/datalogtool.exe", "FRC\\WPILib Tools\\Data Log Tool"],
+        ["tools/wpical.exe", "FRC\\WPILib Tools\\WPIcal"],
+        [
+            "tools/roborioteamnumbersetter.exe",
+            "FRC\\WPILib Tools\\RoboRIO Team Number Setter"
+        ],
+        [
+            "advantagescope/AdvantageScope (WPILib).exe",
+            "FRC\\WPILib Tools\\AdvantageScope (WPILib)"
+        ],
+        [
+            "elastic/elastic_dashboard.exe",
+            "FRC\\WPILib Tools\\Elastic (WPILib)"
+        ],
+        ["vscode/Code.exe", "FRC\\WPILib VS Code"]
     ],
-    "persist": [
-        "vscode/data"
-    ],
+    "persist": ["vscode/data"],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

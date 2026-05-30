@@ -82,11 +82,17 @@
             "Get-ChildItem -Path \"$dir\" -Directory | Where-Object { $_.Name -notin 'tools', 'advantagescope', 'elastic', 'jdk', 'vscode', 'maven', 'vendordeps' } | Remove-Item -Recurse -Force",
             "$year = $version.Split('.')[0]",
             "$public_wpilib = \"C:\\Users\\Public\\wpilib\\$year\"",
-            "if (!(Test-Path $public_wpilib)) { New-Item -ItemType Directory -Path $public_wpilib -Force | Out-Null }",
-            "if (Test-Path \"$public_wpilib\\maven\") { Remove-Item \"$public_wpilib\\maven\" -Force }",
-            "New-Item -ItemType Junction -Path \"$public_wpilib\\maven\" -Value \"$dir\\maven\" -Force | Out-Null",
-            "if (Test-Path \"$public_wpilib\\vendordeps\") { Remove-Item \"$public_wpilib\\vendordeps\" -Force }",
-            "New-Item -ItemType Junction -Path \"$public_wpilib\\vendordeps\" -Value \"$dir\\vendordeps\" -Force | Out-Null"
+            "if (Test-Path $public_wpilib) {",
+            "    $item = Get-Item $public_wpilib",
+            "    if ($item.Attributes -match \"ReparsePoint\") {",
+            "        $item.Delete()",
+            "    } else {",
+            "        Remove-Item $public_wpilib -Recurse -Force",
+            "    }",
+            "}",
+            "$parent = \"C:\\Users\\Public\\wpilib\"",
+            "if (!(Test-Path $parent)) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }",
+            "New-Item -ItemType Junction -Path $public_wpilib -Value \"$dir\" -Force | Out-Null"
         ]
     },
     "shortcuts": [
@@ -114,10 +120,17 @@
         "script": [
             "$year = $version.Split('.')[0]",
             "$public_wpilib = \"C:\\Users\\Public\\wpilib\\$year\"",
-            "if (Test-Path \"$public_wpilib\\maven\") { Remove-Item \"$public_wpilib\\maven\" -Force }",
-            "if (Test-Path \"$public_wpilib\\vendordeps\") { Remove-Item \"$public_wpilib\\vendordeps\" -Force }",
             "if (Test-Path $public_wpilib) {",
-            "    if ((Get-ChildItem $public_wpilib).Count -eq 0) { Remove-Item $public_wpilib -Force }",
+            "    $item = Get-Item $public_wpilib",
+            "    if ($item.Attributes -match \"ReparsePoint\") {",
+            "        $item.Delete()",
+            "    } else {",
+            "        Remove-Item $public_wpilib -Recurse -Force",
+            "    }",
+            "}",
+            "$parent = \"C:\\Users\\Public\\wpilib\"",
+            "if (Test-Path $parent) {",
+            "    if ((Get-ChildItem $parent).Count -eq 0) { Remove-Item $parent -Force }",
             "}"
         ]
     },

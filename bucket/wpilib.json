@@ -12,6 +12,7 @@
     "installer": {
         "script": [
             "Expand-Archive -Path \"$dir\\WPILib_Windows-$version-artifacts.zip\" -DestinationPath \"$dir\" -Force",
+            "Expand-Archive -Path \"$dir\\WPILib_Windows-$version-resources.zip\" -DestinationPath \"$dir\" -Force",
             "& \"$dir\\tools\\ToolsUpdater.bat\"",
             "if (Test-Path \"$dir\\vscodeConfig.json\") {",
             "    $config = Get-Content -Raw -Path \"$dir\\vscodeConfig.json\" | ConvertFrom-Json",

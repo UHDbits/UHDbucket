@@ -11,8 +11,10 @@
     },
     "installer": {
         "script": [
-            "Expand-Archive -Path \"$dir\\WPILib_Windows-$version-artifacts.zip\" -DestinationPath \"$dir\" -Force",
-            "Expand-Archive -Path \"$dir\\WPILib_Windows-$version-resources.zip\" -DestinationPath \"$dir\" -Force",
+            "$art = Get-ChildItem -Path \"$dir\" -Filter \"*-artifacts.zip\" | Select-Object -First 1",
+            "if ($art) { Expand-Archive -Path $art.FullName -DestinationPath \"$dir\" -Force }",
+            "$res = Get-ChildItem -Path \"$dir\" -Filter \"*-resources.zip\" | Select-Object -First 1",
+            "if ($res) { Expand-Archive -Path $res.FullName -DestinationPath \"$dir\" -Force }",
             "& \"$dir\\tools\\ToolsUpdater.bat\"",
             "if (Test-Path \"$dir\\vscodeConfig.json\") {",
             "    $config = Get-Content -Raw -Path \"$dir\\vscodeConfig.json\" | ConvertFrom-Json",

@@ -6,10 +6,8 @@
     "url": "https://drivers.amd.com/drivers/whql-amd-software-adrenalin-edition-26.6.1-win11-c.exe#/dl.7z",
     "hash": "b4b4546876a3799121a2e16a469f0c70e10d9afb8bc7c2168488dfcd74726e6b",
     "installer": {
-        "file": "Bin64\\ATISetup.exe",
-        "args": [
-            "-install",
-            "-view:1"
+        "script": [
+            "Start-Process \"$dir\\Bin64\\ATISetup.exe\" -ArgumentList '-install', '-view:1' -WorkingDirectory \"$dir\\Bin64\" -Wait"
         ]
     },
     "checkver": {

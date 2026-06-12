@@ -8,20 +8,10 @@
     "installer": {
         "file": "Bin64\\ATISetup.exe",
         "args": [
-            "-INSTALL",
+            "-install",
             "-view:1"
-        ],
-        "keep": true
-    },
-    "post_install": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -post_install",
-    "uninstaller": {
-        "file": "Bin64\\ATISetup.exe",
-        "args": [
-            "-UNINSTALL",
-            "ALL"
         ]
     },
-    "post_uninstall": "write-host ''; write-host ''; write-host -f y 'amdgfx uninstall: reboot required'",
     "checkver": {
         "url": "https://www.techpowerup.com/download/amd-radeon-graphics-drivers/",
         "regex": "<div class=\"filename\" title=\"File Name\">whql-amd-software-adrenalin-edition-([\\d].+)-win11-c.exe</div>"

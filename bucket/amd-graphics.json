@@ -8,6 +8,7 @@
     "installer": {
         "file": "Bin64\\ATISetup.exe",
         "args": [
+            "-INSTALL",
             "-view:1"
         ],
         "keep": true

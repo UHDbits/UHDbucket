@@ -1,12 +1,12 @@
 {
-    "version": "0.260",
+    "version": "0.263",
     "description": "Lightweight control tool for ASUS laptops (experimental release)",
     "homepage": "https://github.com/seerge/g-helper-experimental-release",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/seerge/g-helper-experimental-release/releases/download/v0.260/GHelper.zip",
-            "hash": "20296e1aa05eacbc82d9567a060bcec201f7142321cbc1b900d5e67b484c46f1"
+            "url": "https://github.com/seerge/g-helper-experimental-release/releases/download/v0.263/GHelper.zip",
+            "hash": "ba4c38483236f35fdc44b53c339912391a322b58724c2a034b23931c256c60d9"
         }
     },
     "shortcuts": [
